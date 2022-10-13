@@ -1,0 +1,150 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.background-hppd {
+    display:flex;
+    width:100%;
+    z-index: 0;
+    height:100vh;
+    background-image: linear-gradient(180deg, rgba(238, 15, 15, 0.7), rgba(180, 0, 156, 0.8));
+    position: relative;
+}
+
+.background-hppd .img-HPPD{
+    z-index: 0;
+    display:block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -74%);
+    box-shadow: 4px 3px 10px black;
+    border-radius: 50%;
+}
+
+.background-hppd .img-HPPD2 {
+    width: 29%;
+        height: 50%;
+        z-index: 0;
+        display: block;
+        position: absolute;
+        background-size: 50%;
+        top: 50%;
+        left: 15%;
+        transform: translate(-41%, -74%);
+        box-shadow: 4px 3px 10px black;
+        border-radius: 50%;
+        animation: modalFadein ease 1s;
+    
+}
+
+.background-hppd .img-HPPD3 {
+        width: 29%;
+            height: 50%;
+            z-index: 0;
+            display: block;
+            position: absolute;
+            background-size: 50%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-41%, -74%);
+            box-shadow: 4px 3px 10px black;
+            border-radius: 50%;
+            animation: modalFadein ease 1s;
+}
+
+@keyframes modalFadein {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-300px);
+    }
+}
+
+
+    /* Nút Để Mở Chatbox */
+    .nut-mo-chatbox {
+            background-color: #333;
+            color: orange;
+            padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                position: fixed;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 280px;
+                font-size: 30px;
+    }
+
+    /* Ẩn chatbox mặc định */
+    .Chatbox {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+
+    /* Thêm style cho form */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+        color:red;
+       
+        font-weight: 500;
+    }
+
+    /* thiết lập style textarea */
+    .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+    }
+
+    /*thiết lập style cho textarea khi được focus */
+    .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Thiết lập style cho nút trong form*/
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    /* Thiết lập màu nền cho nút đóng chatbox */
+    .form-container .nut-dong-chatbox {
+        background-color: red;
+    }
+
+    /* Thêm hiệu ứng hover cho nút*/
+    .form-container .btn:hover,
+    .nut-mo-chatbox:hover {
+        opacity: 1;
+    }
